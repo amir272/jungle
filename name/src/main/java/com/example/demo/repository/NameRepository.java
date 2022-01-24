@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.entities.Nam;
 
-public interface NameRepository extends JpaRepository<Nam, Integer>{
+public interface NameRepository extends JpaRepository<Nam, Integer> {
 
 }

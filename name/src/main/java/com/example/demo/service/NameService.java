@@ -1,8 +1,7 @@
 package com.example.demo.service;
 
-import org.springframework.stereotype.Component;
+import com.example.demo.entities.Nam;
 
-@Component
-public class NameService {
-
+public interface NameService {
+    public void addName(Nam name);
 }
