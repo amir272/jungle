@@ -31,11 +31,13 @@ public class BaseController {
 	}
 
 	@PostMapping("/postName")
-	public String postName(@ModelAttribute("naming") Nam nam, ModelMap model) {// this naming of ModelAttribute doesn't
+	public String postName(@ModelAttribute("nam") Nam nam, ModelMap model) {// this naming of ModelAttribute doesn't
 																				// matter at all
 		System.out.println(nam.getId());
 		System.out.println(nam.getNaming());
-		nameService.addName(nam);
+		try{nameService.addName(nam);}catch (Exception e) {
+			System.out.println(e);
+		}
 		model.addAttribute("msg", nam.getId() + " " + nam.getNaming() + " is saved");
 		return "addName";
 	}
